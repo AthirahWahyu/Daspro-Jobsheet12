@@ -46,4 +46,20 @@ _Jawaban:_
     - Reusability (dapat digunakan kembali) : Fungsi dapat dipanggil berkali-kali tanpa menulis ulang kode.
     - Mempermudah untuk melakukan perbaikan : Perubahan cukup dilakukan pada satu fungsi tanpa merusak bagian lain.
     - Menghindari kode duplikasi : Dengan fungsi, kita tidak perlu copy-paste blok kode yang sama.
+4.  Alur eksekusi program ketika fungsi Menu() dipanggil dari main : 
+    1.  Program dijalankan, dan eksekusi selalu dimulai dari fungsi 
+    ```java
+        public static void main(String[] args) 
+    ```
+    2.  Di dalam main(), program menemukan perintah: Menu();
+    3.  Ketika baris tersebut dieksekusi, aliran program berpindah dari main() ke fungsi:
+    ```java 
+        public static void Menu()
+    ```
+    4.  Program menjalankan semua perintah System.out.println() yang ada di dalam fungsi Menu(), satu per satu mulai dari atas sampai bawah.
+    5.  Setiap baris println akan menampilkan teks menu ke layar.
+    6.  Setelah seluruh isi fungsi Menu() selesai dieksekusi, program kembali lagi ke baris berikutnya di dalam fungsi main().
+    7.  Karena tidak ada perintah lain setelah Menu(), program kemudian berakhir.
+
+
 
