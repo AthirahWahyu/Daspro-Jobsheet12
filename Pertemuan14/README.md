@@ -98,6 +98,11 @@ _Jawaban:_
         - Kondisi if (isMember) menjadi salah (false)
         - Maka perintah di dalam if tidak dijalankan
         - Output tidak ada pesan diskon 
+5.  Program akan error (tidak bisa dikompilasi). Karena fungsi Menu() didefinisikan seperti ini : 
+    ```java 
+        public static void Menu(String namaPelanggan, boolean isMember)
+    ```
+    Artinya, fungsi tersebut wajib menerima 2 parameter String namaPelanggan dan boolean isMember. Kedua parameter harus dikirim ketika fungsi dipanggil. Jika tidak, Java tidak tahu nilai apa yang harus dimasukkan ke variabel tersebut. Jadi, memanggil fungsi tanpa parameter akan menyebabkan compile-time error, karena fungsi tersebut membutuhkan input untuk bekerja.
 
 
 
