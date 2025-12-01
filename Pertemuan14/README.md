@@ -81,6 +81,12 @@ _Pertanyaan:_
 _Jawaban:_
 
 1.  Parameter digunakan untuk mengirim data ke dalam fungsi agar fungsi bisa bekerja lebih dinamis, fleksibel, dan dapat digunakan ulang tanpa perlu mengubah kode di dalamnya.
+2.  Penjelasan fungsi Menu() menggunakan parameter:
+    - namaPelanggan : agar fungsi bisa menampilkan nama pelanggan yang berbeda.
+    - isMember : agar fungsi bisa menentukan apakah pelanggan mendapat diskon member.
+    
+    Dengan parameter, fungsi menjadi lebih fleksibel, dinamis, dan dapat digunakan untuk banyak pelanggan berbeda, tidak hanya "Andi".
+
 
 
 
