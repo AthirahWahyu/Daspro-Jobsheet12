@@ -139,6 +139,20 @@ _Jawaban:_
     Output : 
 ![P2J6](./P2J6.png)
 
+7.  Perintah pemanggilan fungsi menu yang benar.
+    Code : 
+    ```java 
+            public static void main(String[] args) {
+                Menu("Budi", true, "DISKON30");
+        }
+    ```
+
+    Output : 
+![P2J7](./P2J7.png)
+
+     
+    
+
 
 
 
