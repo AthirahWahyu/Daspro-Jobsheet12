@@ -87,6 +87,18 @@ _Jawaban:_
     
     Dengan parameter, fungsi menjadi lebih fleksibel, dinamis, dan dapat digunakan untuk banyak pelanggan berbeda, tidak hanya "Andi".
 3.  Tidak, parameter bukan hal yang sama dengan variabel tapi keduanya saling berkaitan. Parameter adalah variabel yang dideklarasikan di dalam tanda kurung pada definisi sebuah fungsi/metode, dan digunakan untuk menerima nilai dari luar (dari pemanggil fungsi). Variabel adalah tempat menyimpan data yang nilainya dapat berubah selama program berjalan. Parameter adalah variabel khusus yang digunakan untuk menerima input ke dalam fungsi.
+4.  isMember adalah parameter bertipe boolean (hanya bsia bernilai true atau false) yang digunakan untuk menentukan : Apakah pelanggan adalah member atau bukan. Jika member akan mendapatkan diskon. Jika bukan member tidak mendapatkan diskon.
+
+    - Cara kerja parameter isMember : 
+    1.  Saat isMember == true 
+        - Kondisi if (isMember) menjadi benar (true)
+        - Maka perintah di dalamnya dijalankan 
+        - Output menampilkan pesan diskon member 
+    2.  Saat isMember == false 
+        - Kondisi if (isMember) menjadi salah (false)
+        - Maka perintah di dalam if tidak dijalankan
+        - Output tidak ada pesan diskon 
+
 
 
 
