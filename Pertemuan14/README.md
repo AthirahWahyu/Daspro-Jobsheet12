@@ -103,6 +103,43 @@ _Jawaban:_
         public static void Menu(String namaPelanggan, boolean isMember)
     ```
     Artinya, fungsi tersebut wajib menerima 2 parameter String namaPelanggan dan boolean isMember. Kedua parameter harus dikirim ketika fungsi dipanggil. Jika tidak, Java tidak tahu nilai apa yang harus dimasukkan ke variabel tersebut. Jadi, memanggil fungsi tanpa parameter akan menyebabkan compile-time error, karena fungsi tersebut membutuhkan input untuk bekerja.
+6.  Code : 
+    ```java 
+        package Pertemuan14;
+        public class Kafe4 {
+
+            public static void Menu(String namaPelanggan, boolean isMember, String kodePromo){
+                System.out.println("Selamat datang, " + namaPelanggan + "!");
+
+                if (isMember) {
+                    System.out.println("Anda adalah member, dapatkan diskon 10 % untuk setiap pembelian!");
+                }
+                if (kodePromo == "DISKON50") {
+                    System.out.println("Kode promo valid! Anda mendapatkan diskon 50%");
+                } else if (kodePromo == "DISKON30") {
+                    System.out.println("Kode promo valid! Anda mendapatkan diskon 30%");
+                } else {
+                    System.out.println("Kode promo invalid");
+                }
+                System.out.println("===== MENU RESTO KAFE =====");
+                System.out.println("1. Kopi Hitam - Rp 15,000");
+                System.out.println("2. Cappucino = Rp 20,000");
+                System.out.println("3. Latte - Rp 22,000");
+                System.out.println("4. Teh Tarik - Rp 12,000");
+                System.out.println("5. Roti Bakar - Rp 10,000");
+                System.out.println("6. Mie Goreng - Rp 18,000");
+                System.out.println("===========================");
+                System.out.println("Silakan pilih menu yang Anda inginkan.");
+            }
+            public static void main(String[] args) {
+                Menu("Andi", true, "DISKON50");
+            }
+        }
+    ```
+    Output : 
+![P2J6](./P2J6.png)
+
+
 
 
 
