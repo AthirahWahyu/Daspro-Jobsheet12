@@ -12,8 +12,7 @@ _Pertanyaan:_
 
 1.  Apakah fungsi tanpa parameter selalu harus bertipe void?
 2.  Apakah daftar menu pada program kafe dapat ditampilkan tanpa menggunakan fungsi Menu() ? Modifikasi kode program tersebut untuk dapat menampilkan daftar menu tanpa menggunakan fungsi!
-3.  Jelaskan keuntungan menggunakan fungsi Menu() dibandingkan menulis semua
-perintah penampilan menu langsung di dalam fungsi main.
+3.  Jelaskan keuntungan menggunakan fungsi Menu() dibandingkan menulis semua perintah penampilan menu langsung di dalam fungsi main.
 4.  Uraikan secara singkat alur eksekusi program ketika fungsi Menu() dipanggil dari main (mulai dari program dijalankan sampai daftar menu tampil di layar).
 
 _Jawaban:_
@@ -41,4 +40,10 @@ _Jawaban:_
     Output : 
 
     ![Verifikasi1](./Verifikasi1.png)
+
+3.  Keuntungan menggunakan fungsi :
+    - Kode lebih rapi dan terstruktur : Fungsi membuat program lebih mudah dibaca dan dikelola      karena tugas tertentu dipisah ke dalam blok kode sendiri.
+    - Reusability (dapat digunakan kembali) : Fungsi dapat dipanggil berkali-kali tanpa menulis ulang kode.
+    - Mempermudah untuk melakukan perbaikan : Perubahan cukup dilakukan pada satu fungsi tanpa merusak bagian lain.
+    - Menghindari kode duplikasi : Dengan fungsi, kita tidak perlu copy-paste blok kode yang sama.
 
