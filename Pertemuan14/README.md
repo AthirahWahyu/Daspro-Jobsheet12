@@ -86,6 +86,7 @@ _Jawaban:_
     - isMember : agar fungsi bisa menentukan apakah pelanggan mendapat diskon member.
     
     Dengan parameter, fungsi menjadi lebih fleksibel, dinamis, dan dapat digunakan untuk banyak pelanggan berbeda, tidak hanya "Andi".
+3.  Tidak, parameter bukan hal yang sama dengan variabel tapi keduanya saling berkaitan. Parameter adalah variabel yang dideklarasikan di dalam tanda kurung pada definisi sebuah fungsi/metode, dan digunakan untuk menerima nilai dari luar (dari pemanggil fungsi). Variabel adalah tempat menyimpan data yang nilainya dapat berubah selama program berjalan. Parameter adalah variabel khusus yang digunakan untuk menerima input ke dalam fungsi.
 
 
 
