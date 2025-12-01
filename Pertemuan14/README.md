@@ -150,6 +150,8 @@ _Jawaban:_
     Output : 
 ![P2J7](./P2J7.png)
 
+8.  Ya, penggunaan parameter namaPelanggan dan isMember membuat program jauh lebih mudah dibaca, fleksibel, dan dikembangkan dibandingkan jika nilainya ditulis langsung di dalam fungsi. Fungsi bisa dipakai untuk nama dan status member yang berbeda - beda. Menggunakan parameter lebih baik karena bisa digunakan berkali-kali untuk data berbeda.
+
      
     
 
