@@ -4,19 +4,9 @@ import java.util.Scanner;
 
 public class Kafe4 {
 
-    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo){
-        System.out.println("Selamat datang, " + namaPelanggan + "!");
+    public static void Menu(){
+        System.out.println("Selamat datang!");
 
-        if (isMember) {
-            System.out.println("Anda adalah member, dapatkan diskon 10 % untuk setiap pembelian!");
-        }
-        if (kodePromo.equals("DISKON50")) {
-            System.out.println("Kode promo valid! Anda mendapatkan diskon 50%");
-        } else if (kodePromo.equals("DISKON30")) {
-            System.out.println("Kode promo valid! Anda mendapatkan diskon 30%");
-        } else {
-            System.out.println("Kode promo invalid");
-        }
         System.out.println("===== MENU RESTO KAFE =====");
         System.out.println("1. Kopi Hitam - Rp 15,000");
         System.out.println("2. Cappucino = Rp 20,000");
@@ -27,23 +17,45 @@ public class Kafe4 {
         System.out.println("===========================");
         System.out.println("Silakan pilih menu yang Anda inginkan.");
     }
-    public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
+    public static int hitungTotalHarga(int pilihanMenu, int banyakItem, String kodePromo) {
         int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
 
         int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
-        return hargaTotal;
+
+        // Variabel untuk diskon 
+        double diskon = 0;
+
+        // Mengecek kode promo 
+        if (kodePromo.equals("DISKON50")) {
+            diskon = 0.50;
+            System.out.println("Kode promo valid! Anda mendapatkan diskon 50%");
+        } else if (kodePromo.equals("DISKON30")) {
+                diskon = 0.30;
+                System.out.println("Kode promo valid! Anda mendapatkan dikskon 30%");
+        } else {
+            System.out.println("Kode promo invalid! Tidak ada diskon yang diberikan");
+        }
+        
+        // Hitung total harga setelah diskon
+        int totalSetelahDiskon = (int)(hargaTotal - (hargaTotal * diskon));
+
+        return totalSetelahDiskon;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Menu("Budi", true, "DISKON30");
+        Menu();
 
         System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
         int pilihanMenu = sc.nextInt();
+
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = sc.nextInt();
 
-        int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem);
+        System.out.print("Masukkan kode promo (jika ada): ");
+        String kodePromo = sc.next();
 
-        System.out.println("Total harga untuk pesanan Anda: Rp " + totalHarga);
+        int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem, kodePromo);
+
+        System.out.println("Total harga yang harus dibayar: Rp " + totalHarga);
     }
 }

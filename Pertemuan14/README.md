@@ -162,9 +162,7 @@ _Pertanyaan:_
 
 1.  Jelaskan secara singkat kapan suatu fungsi membutuhkan nilai kembalian (return value) dan kapan fungsi tidak perlu mengembalikan nilai. Berikan minimal satu contoh dari program kafe pada Percobaan 3 untuk masing-masing kasus.
 2.  Fungsi hitungTotalHargaNoAbsen saat ini mengembalikan total harga berdasarkan pilihanMenu dan jumlahPesanan. Sebutkan tipe data nilai kembalian dan dua buah parameter yang digunakan fungsi tersebut. Jelaskan arti masing-masing parameter dalam konteks program kafe.
-3.  Modifikasi kode di atas sehingga fungsi hitungTotalHargaNoAbsen dapat menerima kodePromo. Jika kodePromo adalah "DISKON50", maka mendapat diskon 50% dari totalHarga dan tampilkan diskon. Jika kodePromo adalah "DISKON30", maka mendapat diskon 30% dari totalHarga dan tampilkan diskon. Jika tidak ada kode
-promo yang berlaku, tampilkan kode invalid dan tidak ada pengurangan total harga
-totalHarga.
+3.  Modifikasi kode di atas sehingga fungsi hitungTotalHargaNoAbsen dapat menerima kodePromo. Jika kodePromo adalah "DISKON50", maka mendapat diskon 50% dari totalHarga dan tampilkan diskon. Jika kodePromo adalah "DISKON30", maka mendapat diskon 30% dari totalHarga dan tampilkan diskon. Jika tidak ada kode promo yang berlaku, tampilkan kode invalid dan tidak ada pengurangan total harga totalHarga.
 4.  Modifikasi kode di atas sehingga bisa memilih beberapa jenis menu berbeda serta menampilkan total keseluruhan pesanan. Bagaimana memodifikasi program sehingga pengguna dapat: memesan lebih dari satu jenis menu (misalnya menu 1 dan 3 sekaligus), dan menampilkan total keseluruhan pesanan (gabungan dari semua jenis menu)?
 
 _Jawaban:_
@@ -240,7 +238,74 @@ _Jawaban:_
             ```java 
                 int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem
             ``` 
-            
+3.  Code : 
+    ```java 
+        package Pertemuan14;
+
+        import java.util.Scanner;
+
+        public class Kafe4 {
+
+            public static void Menu(){
+                System.out.println("Selamat datang!");
+
+                System.out.println("===== MENU RESTO KAFE =====");
+                System.out.println("1. Kopi Hitam - Rp 15,000");
+                System.out.println("2. Cappucino = Rp 20,000");
+                System.out.println("3. Latte - Rp 22,000");
+                System.out.println("4. Teh Tarik - Rp 12,000");
+                System.out.println("5. Roti Bakar - Rp 10,000");
+                System.out.println("6. Mie Goreng - Rp 18,000");
+                System.out.println("===========================");
+                System.out.println("Silakan pilih menu yang Anda inginkan.");
+            }
+            public static int hitungTotalHarga(int pilihanMenu, int banyakItem, String kodePromo) {
+                int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
+
+                int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
+
+                // Variabel untuk diskon 
+                double diskon = 0;
+
+                // Mengecek kode promo 
+                if (kodePromo.equals("DISKON50")) {
+                    diskon = 0.50;
+                    System.out.println("Kode promo valid! Anda mendapatkan diskon 50%");
+                } else if (kodePromo.equals("DISKON30")) {
+                        diskon = 0.30;
+                        System.out.println("Kode promo valid! Anda mendapatkan dikskon 30%");
+                } else {
+                    System.out.println("Kode promo invalid! Tidak ada diskon yang diberikan");
+                }
+                
+                // Hitung total harga setelah diskon
+                int totalSetelahDiskon = (int)(hargaTotal - (hargaTotal * diskon));
+
+                return totalSetelahDiskon;
+            }
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                Menu();
+
+                System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
+                int pilihanMenu = sc.nextInt();
+
+                System.out.print("Masukkan jumlah item yang ingin dipesan: ");
+                int banyakItem = sc.nextInt();
+
+                System.out.print("Masukkan kode promo (jika ada): ");
+                String kodePromo = sc.next();
+
+                int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem, kodePromo);
+
+                System.out.println("Total harga yang harus dibayar: Rp " + totalHarga);
+            }
+        }
+    ``` 
+    Output : 
+![P3J3](./P3J3.png)
+
+
 
 
 
