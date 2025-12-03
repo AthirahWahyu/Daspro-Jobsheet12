@@ -215,6 +215,34 @@ _Jawaban:_
         - Fungsi ini hanya menampilkan menu dan informasi promosi.
         - Tidak ada nilai yang perlu dikembalikan ke main().
         - Karena hanya melakukan output ke layar, maka cukup menggunakan void.
+2.  - Tipe Data Nilai Kembalian (Return Type)
+        - Fungsi hitungTotalHarga memiliki tipe data int. Karena fungsi ini akan mengembalikan total harga dari pesanan dalam bentuk angka (bilangan bulat). 
+        ```java
+            public static int hitungTotalHarga(int pilihanMenu, int banyakItem)
+        ``` 
+    - Dua parameter dalam fungsi 
+        - Fungsi ini memiliki 2 parameter : 
+            a. int pilihanMenu 
+            - Paremeter ini menunjukkan nomor menu yang dipilih pelanggan.
+            - Nilainya berkisar antara 1-6, sesuai daftar menu :
+            1. Kopi Hitam
+            2. Cappucino
+            3. Latte 
+            4. Teh Tarik 
+            5. Roti Bakar
+            6. Mie Goreng
+            - Arti dalam konteks program : Program menggunakan angka ini untuk mengambil harga item dari array hargaItems berdaskan indeks.
+
+            b. int banyakItem 
+            - Parameter ini mewakili jumlah porsi/item yang dipesan pelanggan.
+            - Contoh : jika pelanggan ingin membeli 3 Cappucino, maka banyakItem = 3.
+            - Arti dalam konteks program : Nilai ini digunakan untuk menghitung total harga dengan rumus :
+            ```java 
+                int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem
+            ``` 
+            
+
+
 
 
 
