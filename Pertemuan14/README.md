@@ -152,6 +152,75 @@ _Jawaban:_
 
 8.  Ya, penggunaan parameter namaPelanggan dan isMember membuat program jauh lebih mudah dibaca, fleksibel, dan dikembangkan dibandingkan jika nilainya ditulis langsung di dalam fungsi. Fungsi bisa dipakai untuk nama dan status member yang berbeda - beda. Menggunakan parameter lebih baik karena bisa digunakan berkali-kali untuk data berbeda.
 
+## - Percobaan 3 : Membuat Fungsi Dengan Nilai Kembalian 
+
+## - Percobaan 3 : Verifikasi Hasil Percobaan 
+
+![Verifikasi3](./Verifikasi3.png)
+
+_Pertanyaan:_
+
+1.  Jelaskan secara singkat kapan suatu fungsi membutuhkan nilai kembalian (return value) dan kapan fungsi tidak perlu mengembalikan nilai. Berikan minimal satu contoh dari program kafe pada Percobaan 3 untuk masing-masing kasus.
+2.  Fungsi hitungTotalHargaNoAbsen saat ini mengembalikan total harga berdasarkan pilihanMenu dan jumlahPesanan. Sebutkan tipe data nilai kembalian dan dua buah parameter yang digunakan fungsi tersebut. Jelaskan arti masing-masing parameter dalam konteks program kafe.
+3.  Modifikasi kode di atas sehingga fungsi hitungTotalHargaNoAbsen dapat menerima kodePromo. Jika kodePromo adalah "DISKON50", maka mendapat diskon 50% dari totalHarga dan tampilkan diskon. Jika kodePromo adalah "DISKON30", maka mendapat diskon 30% dari totalHarga dan tampilkan diskon. Jika tidak ada kode
+promo yang berlaku, tampilkan kode invalid dan tidak ada pengurangan total harga
+totalHarga.
+4.  Modifikasi kode di atas sehingga bisa memilih beberapa jenis menu berbeda serta menampilkan total keseluruhan pesanan. Bagaimana memodifikasi program sehingga pengguna dapat: memesan lebih dari satu jenis menu (misalnya menu 1 dan 3 sekaligus), dan menampilkan total keseluruhan pesanan (gabungan dari semua jenis menu)?
+
+_Jawaban:_
+
+1.  a.  Fungsi yang membutuhkan nilai kembalian (return value) ketika fungsi harus menghasilkan jawaban atau hasil perhitungan, dan hasil tersebut ingin dipakai lagi oleh bagian program lain.
+    - Contoh dari program kafe pada Percobaan 3 : 
+    ```java 
+            public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
+            int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
+
+            int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
+            return hargaTotal;
+        }
+    ```
+    - Penjelasan : 
+        - Fungsi ini menghitung total harga pesanan.
+        - Hasil perhitungannya dibutuhkan di main() untuk ditampilkan kepada user.
+        - Karena program butuh hasilnya, maka harus ada return int (return hargaTotal).
+
+    b.  Fungsi yang tidak membutuhkan nilai kembalian (void) ketika fungsi hanya melakukan tugas tertentu seperti mencetak menu, menampilkan pesan, atau melakukan proses tanpa perlu mengirim hasil kembali ke pemanggil.
+    - Contoh dari program kafe Percobaan 3 :
+    ```java 
+            public static void Menu(String namaPelanggan, boolean isMember, String kodePromo){
+                System.out.println("Selamat datang, " + namaPelanggan + "!");
+
+                if (isMember) {
+                    System.out.println("Anda adalah member, dapatkan diskon 10 % untuk setiap pembelian!");
+                }
+                if (kodePromo.equals("DISKON50")) {
+                    System.out.println("Kode promo valid! Anda mendapatkan diskon 50%");
+                } else if (kodePromo.equals("DISKON30")) {
+                    System.out.println("Kode promo valid! Anda mendapatkan diskon 30%");
+                } else {
+                    System.out.println("Kode promo invalid");
+                }
+                System.out.println("===== MENU RESTO KAFE =====");
+                System.out.println("1. Kopi Hitam - Rp 15,000");
+                System.out.println("2. Cappucino = Rp 20,000");
+                System.out.println("3. Latte - Rp 22,000");
+                System.out.println("4. Teh Tarik - Rp 12,000");
+                System.out.println("5. Roti Bakar - Rp 10,000");
+                System.out.println("6. Mie Goreng - Rp 18,000");
+                System.out.println("===========================");
+                System.out.println("Silakan pilih menu yang Anda inginkan.");
+            }
+    ```
+    - Penjelasan :
+        - Fungsi ini hanya menampilkan menu dan informasi promosi.
+        - Tidak ada nilai yang perlu dikembalikan ke main().
+        - Karena hanya melakukan output ke layar, maka cukup menggunakan void.
+
+
+
+
+
+
      
     
 
