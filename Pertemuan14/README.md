@@ -544,7 +544,42 @@ _Jawaban:_
         - Fungsi dipakai seperti "alat hitung"
         1. Fungsi tidak perlu nilai kembalian (return void) jika : 
         - Fungsi hanya melakukan tindakan, bukan menghitung sesuatu. Contoh : mencetak data, menampilkan pesan.
-        - Fungsi hanya mengubah variabel global / objek, bukan mengembalikan nilai. Contoh : menambah pengunjung ke ArrayList        
+        - Fungsi hanya mengubah variabel global / objek, bukan mengembalikan nilai. Contoh : menambah pengunjung ke ArrayList.
+5.  1. Kapan fungsi sebaiknya menggunakan parameter?
+        - Fungsi harus menggunakan parameter bila : Fungsi membutuhkan data dari luar agar dapat melakukan perhitungan.
+        - Dalam Percobaan 5, fungsi : 
+            ```java 
+                static int hitungLuas (int pjg, int lb)
+            ``` 
+            dan 
+            ```java 
+                static int hitungVolume(int tinggi, int a, int b)
+            ``` 
+        - Penjelasan : 
+            -> Fungsi tidak tahu berapa panjang, lebar, dan tinggi sebelum dipanggil.
+            -> Nilai p, l dan t baru diketahui setelah user memasukkan input.
+            -> Perhitungan luas dan volume harus berdasarkan data yang berbeda-beda, tidak tetap.
+        - Tanpa parameter, fungsi tidak dapat menghitung luas atau volume karena tidak memiliki nilai untuk dihitung. 
+        - Jadi, fungsi memakai parameter karena perhitungannya bergantung pada data yang diberikan saat runtime.
+    2.  Kapan fungsi boleh tanpa parameter?
+        - Fungsi boleh tanpa parameter jika nilai yang diperlukan sudah tersedia di dalam di dalam fungsi itu sendiri, misalnya : 
+            -> Nilai sudah menjadi variabel global.
+            -> Fungsi tidak butuh input dari luar.
+        - Contoh : 
+            ```java 
+                static int p = 4, l = 3, t = 5;
+
+                static int hitungLuas() {
+                    return p * l; // tidak butuh parameter
+                }
+
+                static int hitungVolume() {
+                    return p * l * t;
+                }
+            ```
+        - Penjelasan : 
+            -> Fungsi tidak membutuhkan parameter karena semua nilai sudah tersedia secara global. Namun pada Percobaan 5, ini tidak digunakan karena input berasal dari user, bukan nilai tetap.
+
 
 
 
