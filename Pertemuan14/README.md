@@ -579,6 +579,8 @@ _Jawaban:_
             ```
         - Penjelasan : 
             -> Fungsi tidak membutuhkan parameter karena semua nilai sudah tersedia secara global. Namun pada Percobaan 5, ini tidak digunakan karena input berasal dari user, bukan nilai tetap.
+6.  - Gunakan return value jika : Fungsi menghasilkan nilai yang akan dipakai ulang, disimpan, atau diproses lagi. Seperti hitungLuas() dan hitungVolume().
+    - Gunakan void (tanpa return) jika : Fungsi hanya melakukan aksi mencetak, meminta input, menampilkan hasil. Seperti main().
 
 
 
