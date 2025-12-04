@@ -478,6 +478,34 @@ _Jawaban:_
     Daftar nama pengunjung: 
     Daftar nama pengunjung: 
 
+## - Percobaan 5 : Pembuatan Kode Program, dengan Fungsi versus Tanpa Fungsi 
+
+## - Percobaan 5 : Verifikasi Hasil Percobaan 
+
+![Verifikasi5](./Verifikasi5.png)
+
+_Pertanyaan:_
+
+1.  Sebutkan tahapan dan urutan eksekusi program pada Percobaan 5, mulai dari program dijalankan hingga menampilkan luas persegi panjang dan volume balok!
+2.  Tuliskan output yang dihasilkan program HitungBalokNoAbsen jika pengguna memasukkan panjang = 4, lebar = 3, dan tinggi = 5. Jelaskan secara singkat alur jalannya program sampai output tersebut muncul.
+3.  Apakah output dari program di bawah ini kemudian jelaskan alur jalannya program tersebut!
+![P5P3](./P5P3.png)
+4.  Pada saat apakah fungsi yang kita buat harus menggunakan parameter atau tidak? Pada saat apakah fungsi yang kita buat harus memiliki nilai kembalian atau tidak? Jelaskan!
+5.  Jelaskan kapan sebuah fungsi sebaiknya menggunakan parameter dan kapan fungsi boleh tanpa parameter, dengan mengacu pada fungsi hitungLuas dan hitungVolume di Percobaan 5.
+6.  Jelaskan kapan sebuah fungsi sebaiknya memiliki nilai kembalian (return value) dan kapan tidak perlu memiliki nilai kembalian, dengan mengacu pada fungsi main, hitungLuas, dan hitungVolume.
+
+_Jawaban:_
+
+1.  - Urutan Eksekusi Program 
+        1. Program mulai dari main()
+        2. Input p, l, t
+        3. Memanggil hitungLuas(p, l) -> menghitung luas -> mengembalikan hasil
+        4. Menampilkan luas
+        5. Memanggil hitungVolume(t, p, l) -> menghitung luas alas (memnggunakan HitungLuas) -> menghitung volume
+        6. Menampilkan volume 
+        7. Program selesai
+
+    
 
 
 
