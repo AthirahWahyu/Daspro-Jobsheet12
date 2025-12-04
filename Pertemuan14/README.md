@@ -425,6 +425,40 @@ _Jawaban:_
     Output : 
 ![P4J2](./P4J2.png)
 
+3.  Tidak bisa menggunakan dua varargs dalam satu fungsi. Tapi, Java mengizinkan satu varargs + parameter lain, selama varargs berada di posisi paling akhir.
+    - Penjelasan Aturan Varargs di Java : 
+        Java memiliki aturan khusus untuk varagrs (...) : 
+        1. Hanya boleh ada satu varargs dalam satu method : Karena varargs itu sendiri adalah bentuk array, jika ada dua varargs, Java tidak dapat membedakan mana yang menerima jumlah parameter berapa. Ini membuat pemanggilan method menjadi ambigu.
+        2.  Varargs harus diletakkan di posisi paling belakang 
+        - Contoh yang benar : 
+        ```java 
+            void contoh(int angka, String...nama)
+        ```
+        - Contoh yang salah (varargs tidak di akhir) : 
+        ```java 
+            void contoh(String...nama, int angka)
+        ```
+        - Contoh yang tidak boleh : Dua varargs dalam satu method : 
+        ```java 
+            void data(String...nama, int...umur) { }
+        ``` 
+        ini akan error karena Java tidak bisa menentukan pembagian antara parameter pemanggilan.
+        - Contoh yang boleh (1 varargs + parameter lainnya)
+        ```java
+            void cetakData(String tipe, int...angka){
+                System.out.println("Tipe: " + tipe);
+                for(int a : angka) {
+                    System.out.println(a);
+                }
+            }
+        ```
+        - Pemanggilan : 
+        ```java
+            cetakData("Bilangan", 10, 20, 30);
+        ```
+        ini valid karena hanya ada satu varargs, varargs berada di ujung parameter.
+
+
 
 
 
