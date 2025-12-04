@@ -504,6 +504,17 @@ _Jawaban:_
         5. Memanggil hitungVolume(t, p, l) -> menghitung luas alas (memnggunakan HitungLuas) -> menghitung volume
         6. Menampilkan volume 
         7. Program selesai
+2.  Output : 
+![P5J2](./P5J2.png)
+
+    - Penjelasan : 
+        - Program mulai dari main() : Scanner dibuat untuk membaca input
+        - Pengguna memasukkan panjang 
+        - Pengguna memasukkan lebar
+        - Pengguna memasukkan tinggi
+        - Program memanggil hitungLuas(p,l)
+        - Program memanggil hitungVolume(t, p, l)
+
 
     
 
