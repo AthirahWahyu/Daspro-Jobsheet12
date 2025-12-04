@@ -515,6 +515,29 @@ _Jawaban:_
         - Program memanggil hitungLuas(p,l)
         - Program memanggil hitungVolume(t, p, l)
 
+3.  Output : 
+![P5J3](./P5J3.png)
+
+    - Penjelasan : 
+        - Baris ini dijalankan : int temp = jumlah(1, 1);
+        - Memanggil fungsi : Jumlah(1,1) -> 1+1 = 2
+        - Sehingga temp = 2
+        - Baris berikutnya dijalankan : TampilJumlah(temp, 5);
+        - Artinya : TampilJumlah(2, 5);
+        - Di dalam TampilJumlah(2,5)
+        TampilHinggaKei(Jumlah(2,5));
+        - Pertama dihitung : Jumlah(2, 5) -> 2 + 5 = 7
+        - Jadi yang dipanggil adalah : TampilHinggaKei(7);
+        - Di dalam TampilHinggaKei(7) : Fungsinya mencetak angka dari 1 sampai i : 
+
+        ```java 
+                for (int j = 1; j <= i; j++) {
+                System.out.println(j);
+            }
+        ```
+        
+
+
 
     
 
