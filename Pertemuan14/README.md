@@ -457,6 +457,27 @@ _Jawaban:_
             cetakData("Bilangan", 10, 20, 30);
         ```
         ini valid karena hanya ada satu varargs, varargs berada di ujung parameter.
+4.  Jika fungsi daftarPengunjung dipanggil tanpa argumen, maka program tetap berjalan normal. Tidak terjadi error apa pun, baik saat kompilasi maupun saat dijalankan.
+    - Penjelasan mengapa tidak error : Parameter String... namaPengunjung adalah varargs.
+        - Varargs berarti : 
+            - Boleh menerima 0, 1, atau banyak argumen. 
+            - Jika tidak ada argumen, Java akan memperlakukan varargs sebagai array kosong (String[0]).
+    - Jadi pemanggilan seperti ini valid : 
+        - daftarPengunjung(); // tanpa argumen
+    - Apa yang akan terjadi di dalam method? 
+        - Karena tidak ada argumen, maka : 
+            - namaPengunjung.length == 0
+    Maka for-each loop tidak akan menjalankan isi loop, karena tidak ada elemen untuk diulang. 
+    - Output yang dihasilkan 
+    - Jika dipanggil seperti ini : 
+    daftarPengunjung();
+    daftarPengunjung();
+    daftarPengunjung();
+    - Maka outputnya : 
+    Daftar nama pengunjung: 
+    Daftar nama pengunjung: 
+    Daftar nama pengunjung: 
+
 
 
 
