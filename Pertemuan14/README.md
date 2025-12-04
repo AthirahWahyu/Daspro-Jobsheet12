@@ -402,6 +402,28 @@ _Jawaban:_
     - Agar metode dapat menerima jumlah parameter yang berbeda - beda (fleksibel).
     - Lebih praktis dibanding membuat banyak overload.
     - Secara internal Java mengubah varArgs menjadi array, sehingga bisa diproses dengan loop.
+2.  Code : 
+    ```java 
+        package Pertemuan14;
+
+        public class PengunjungCafe4 {
+            static void daftarPengunjung(String...namaPengunjung){
+                System.out.println("Daftar nama pengunjung: ");
+                
+                // menggunakan for-each loop 
+                for (String nama : namaPengunjung) {
+                    System.out.println("- " + nama);
+                }
+            }
+            public static void main(String[] args) {
+                daftarPengunjung("Ali", "Budi", "Citra");
+                daftarPengunjung("Andi");
+                daftarPengunjung("Doni", "Eti", "Fahmi", "Galih");
+            }   
+        }
+    ```
+    Output : 
+![P4J2](./P4J2.png)
 
 
 
