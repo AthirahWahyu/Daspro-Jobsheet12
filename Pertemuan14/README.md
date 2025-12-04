@@ -137,7 +137,8 @@ _Jawaban:_
         }
     ```
     Output : 
-![P2J6](./P2J6.png)
+
+    ![P2J6](./P2J6.png)
 
 7.  Perintah pemanggilan fungsi menu yang benar.
     Code : 
@@ -148,7 +149,8 @@ _Jawaban:_
     ```
 
     Output : 
-![P2J7](./P2J7.png)
+
+    ![P2J7](./P2J7.png)
 
 8.  Ya, penggunaan parameter namaPelanggan dan isMember membuat program jauh lebih mudah dibaca, fleksibel, dan dikembangkan dibandingkan jika nilainya ditulis langsung di dalam fungsi. Fungsi bisa dipakai untuk nama dan status member yang berbeda - beda. Menggunakan parameter lebih baik karena bisa digunakan berkali-kali untuk data berbeda.
 
@@ -303,7 +305,8 @@ _Jawaban:_
         }
     ``` 
     Output : 
-![P3J3](./P3J3.png)
+
+    ![P3J3](./P3J3.png)
 
 4.  Code :
     ```java 
@@ -380,8 +383,9 @@ _Jawaban:_
             }
         }
     ```
-    Output : 
-![P3J4](./P3J4.png)
+    Output :
+
+    ![P3J4](./P3J4.png)
 
 ## - Percobaan 4 : Fungsi Varargs 
 
@@ -423,7 +427,8 @@ _Jawaban:_
         }
     ```
     Output : 
-![P4J2](./P4J2.png)
+
+    ![P4J2](./P4J2.png)
 
 3.  Tidak bisa menggunakan dua varargs dalam satu fungsi. Tapi, Java mengizinkan satu varargs + parameter lain, selama varargs berada di posisi paling akhir.
     - Penjelasan Aturan Varargs di Java : 
@@ -505,7 +510,8 @@ _Jawaban:_
         6. Menampilkan volume 
         7. Program selesai
 2.  Output : 
-![P5J2](./P5J2.png)
+
+    ![P5J2](./P5J2.png)
 
     - Penjelasan : 
         - Program mulai dari main() : Scanner dibuat untuk membaca input
@@ -516,7 +522,8 @@ _Jawaban:_
         - Program memanggil hitungVolume(t, p, l)
 
 3.  Output : 
-![P5J3](./P5J3.png)
+
+    ![P5J3](./P5J3.png)
 
     - Penjelasan : 
         - Baris ini dijalankan : int temp = jumlah(1, 1);
@@ -616,14 +623,78 @@ _Jawaban:_
         }
     ```
     Output : 
-![T1J1](./T1J1.png)
 
+    ![T1J1](./T1J1.png)
 
+2.  Code : 
+    ```java
+        package Pertemuan14;
 
+        import java.util.Scanner;
 
+        public class NilaiMahasiswa4 {
+            // a. Fungsi isianArray : mengisi array dengan input user
+            static void isianArray(int[] arr){
+                Scanner input = new Scanner(System.in);
+                System.out.println("Masukkan nilai mahasiswa: ");
 
+                for (int i = 0; i < arr.length; i++) {
+                    System.out.print("Nilai mahasiswa ke-" + (i + 1) + ": ");
+                    arr[i] = input.nextInt();
+                }
+            }
+            // b. fumgsi tampilArray : menampilkan isi array
+            static void tampilArray(int[] arr){
+                System.out.println("\nDaftar nilai mahasiswa:");
+                for (int i = 0; i < arr.length; i++) {
+                    System.out.println("Mahasiswa ke-" + (i+1) + ": " + arr[i]);
+                }
+            }
+            // c. Fungsi hitTot : menghitung total nilai mahasiswa 
+            static int hitTot(int[] arr){
+                int total = 0;
+                for (int nilai : arr) {
+                    total += nilai;
+                }
+                return total;
+            }
+            // d. Fungsi main
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
 
+                // Membaca jumlah mahasiswa (N)
+                System.out.print("Masukkan jumlah mahasiswa (N): ");
+                int N = input.nextInt();
+
+                // Membuat array ukuran N
+                int[] nilaiMhs = new int[N];
+
+                // Memanggil fungsi isianArray 
+                System.out.println("-----------------------------------");
+                isianArray(nilaiMhs);
+
+                // Memanggil fungsi tampilArray
+                tampilArray(nilaiMhs);
+
+                // Memanggil fungsi hitTot
+                int totalNilai = hitTot(nilaiMhs);
+
+                System.out.println("-----------------------------------");
+                System.out.println("Total nilai seluruh mahasiswa : " + totalNilai);
+
+                input.close();
+            }
+        }
+    ```
+    Output : 
     
+    ![T2J2](./T2J2.png)
+
+
+
+
+
+            
 
 
 
