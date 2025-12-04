@@ -535,7 +535,17 @@ _Jawaban:_
                 System.out.println(j);
             }
         ```
-        
+4.  a. Kapan fungsi harus menggunakan parameter?
+        - Fungsi membutuhkan data dari luar. Contoh : fungsi ingin menghitung luas persegi, maka ia butuh nilai sisi.
+        - Supaya fungsi bisa dipakai berulang dengan nilai berbeda.
+        - Fungsi tidak perlu parameter jika fungsi tidak membutuhkan data dari luar. Contoh : menampilkan menu.
+    b. Kapan fungsi harus memiliki nilai kembalian (return value)?
+        - Fungsi harus memberikan hasil perhitungan ke pemanggil. Contoh : menghitung rata-rata, menghitung diskon, dsb. 
+        - Fungsi dipakai seperti "alat hitung"
+        1. Fungsi tidak perlu nilai kembalian (return void) jika : 
+        - Fungsi hanya melakukan tindakan, bukan menghitung sesuatu. Contoh : mencetak data, menampilkan pesan.
+        - Fungsi hanya mengubah variabel global / objek, bukan mengembalikan nilai. Contoh : menambah pengunjung ke ArrayList        
+
 
 
 
